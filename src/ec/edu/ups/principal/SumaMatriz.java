@@ -30,7 +30,9 @@ public class SumaMatriz extends Thread {
         for (int i = minFilas; i < maxFilas; i++) {
 
             for (int j = 0; j < matrizRes[i].length; j++) {
+                
                 matrizRes[i][j] = matrizA[i][j] + matrizB[i][j];
+                
             }
 
         }
