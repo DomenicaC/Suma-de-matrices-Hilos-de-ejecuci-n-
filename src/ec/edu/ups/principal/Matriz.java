@@ -41,6 +41,7 @@ public class Matriz {
             switch (opcion) {
                 case 1:
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num = 100;
                     System.out.println("tamaño" + num);
@@ -89,9 +90,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir = num % nHilos;
 
                     SumaMatriz[] hilo = new SumaMatriz[nHilos];
@@ -138,6 +142,7 @@ public class Matriz {
 
                 case 2:
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num1 = 1000;
                     System.out.println("tamaño" + num1);
@@ -186,9 +191,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos1 = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir1 = num1 % nHilos1;
 
                     SumaMatriz[] hilo1 = new SumaMatriz[nHilos1];
@@ -232,8 +240,10 @@ public class Matriz {
                     System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
                     System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
                     break;
+
                 case 3:
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num2 = 2000;
                     System.out.println("tamaño" + num2);
@@ -282,9 +292,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos2 = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir2 = num2 % nHilos2;
 
                     SumaMatriz[] hilo2 = new SumaMatriz[nHilos2];
@@ -332,6 +345,7 @@ public class Matriz {
                 case 4:
 
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num3 = 3000;
                     System.out.println("tamaño" + num3);
@@ -380,9 +394,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos3 = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir3 = num3 % nHilos3;
 
                     SumaMatriz[] hilo3 = new SumaMatriz[nHilos3];
@@ -429,6 +446,7 @@ public class Matriz {
 
                 case 5:
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num4 = 4000;
                     System.out.println("tamaño" + num4);
@@ -477,9 +495,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos4 = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir4 = num4 % nHilos4;
 
                     SumaMatriz[] hilo4 = new SumaMatriz[nHilos4];
@@ -526,6 +547,7 @@ public class Matriz {
 
                 case 6:
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num5 = 5000;
                     System.out.println("tamaño" + num5);
@@ -574,9 +596,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos5 = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir5 = num5 % nHilos5;
 
                     SumaMatriz[] hilo5 = new SumaMatriz[nHilos5];
@@ -623,6 +648,7 @@ public class Matriz {
 
                 case 7:
                     tiempoInicio = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     System.out.println("Ingrese el valor de la matriz cuadrada \n");
                     int num6 = sn.nextInt();
@@ -672,9 +698,12 @@ public class Matriz {
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
-                    tiempoInicio1 = System.nanoTime();
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos6 = sn.nextInt();
+
+                    tiempoInicio1 = System.nanoTime();
+                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+
                     int repartir6 = num6 % nHilos6;
 
                     SumaMatriz[] hilo6 = new SumaMatriz[nHilos6];
