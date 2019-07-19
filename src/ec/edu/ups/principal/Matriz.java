@@ -19,7 +19,7 @@ public class Matriz {
     public static void main(String[] args) throws InterruptedException {
         Scanner sn = new Scanner(System.in);
         double tiempoInicio, tiempoFinal;
-        double tiempoInicio1, tiempoFinal1;
+        long tiempoInicio1, tiempoFinal1, tiempo = 0, tiempo1;
         boolean salir = false;
         int opcion;
 
@@ -40,8 +40,6 @@ public class Matriz {
             opcion = sn.nextInt();
             switch (opcion) {
                 case 1:
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num = 100;
                     System.out.println("tamaño" + num);
@@ -73,6 +71,9 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo inicial " + tiempoInicio);
+
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -84,8 +85,8 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println("Tiempo final " + tiempoFinal);
                     System.out.println("\n");
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -93,8 +94,8 @@ public class Matriz {
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo inicial " + tiempoInicio1);
 
                     int repartir = num % nHilos;
 
@@ -131,8 +132,9 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+
+                    System.out.println("Tiempo inicial " + tiempoInicio1);
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
@@ -141,8 +143,6 @@ public class Matriz {
                     break;
 
                 case 2:
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num1 = 1000;
                     System.out.println("tamaño" + num1);
@@ -174,6 +174,9 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio + " milisegundos");
+
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -185,17 +188,16 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("\n");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println("Tiempo final " + tiempoFinal + " milisegundos");
 
 //-----------------------------------------------------------------------------------------------------------------------
                     //hilos
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos1 = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio1 + " milisegundos");
 
                     int repartir1 = num1 % nHilos1;
 
@@ -232,18 +234,16 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+                    System.out.println("tiempo final " + tiempoFinal1 + " milisegundos");
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
-                    System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
+                    System.out.println("Sin hilos: " + tiempoFinal + " milisegundos");
+                    System.out.println("Con hilos: " + tiempoFinal1 + " milisegundos");
                     break;
 
                 case 3:
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num2 = 2000;
                     System.out.println("tamaño" + num2);
@@ -275,6 +275,9 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio + " milisegundos");
+
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -286,8 +289,8 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println(tiempoFinal + " milisegundos");
                     System.out.println("\n");
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -295,8 +298,8 @@ public class Matriz {
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos2 = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio1 + " milisegundos");
 
                     int repartir2 = num2 % nHilos2;
 
@@ -333,19 +336,16 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+                    System.out.println("Tiempo finalizacion" + tiempoFinal1 + " milisegundos");
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
-                    System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
+                    System.out.println("Sin hilos: " + tiempoFinal + " milisegundos");
+                    System.out.println("Con hilos: " + tiempoFinal1 + " milisegundos");
                     break;
 
                 case 4:
-
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num3 = 3000;
                     System.out.println("tamaño" + num3);
@@ -377,6 +377,9 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio + " milisegundos");
+
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -388,8 +391,8 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println("Tiempo finalizacion" + tiempoFinal + " milisegundos");
                     System.out.println("\n");
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -397,8 +400,8 @@ public class Matriz {
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos3 = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio1 + " milisegundos");
 
                     int repartir3 = num3 % nHilos3;
 
@@ -435,18 +438,16 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+                    System.out.println("Tiempo finalizacion" + tiempoFinal1 + " milisegundos");
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
-                    System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
+                    System.out.println("Sin hilos: " + tiempoFinal + " milisegundos");
+                    System.out.println("Con hilos: " + tiempoFinal1 + " milisegundos");
                     break;
 
                 case 5:
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num4 = 4000;
                     System.out.println("tamaño" + num4);
@@ -478,6 +479,8 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio + " milisegundos");
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -489,8 +492,8 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println("Tiempo finalizacion " + tiempoFinal + " milisegundos");
                     System.out.println("\n");
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -498,8 +501,8 @@ public class Matriz {
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos4 = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio1 + " milisegundos");
 
                     int repartir4 = num4 % nHilos4;
 
@@ -536,18 +539,16 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+                    System.out.println("Tiempo finalizacion " + tiempoFinal1 + " milisegundos");
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
-                    System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
+                    System.out.println("Sin hilos: " + tiempoFinal + " milisegundos");
+                    System.out.println("Con hilos: " + tiempoFinal1 + " milisegundos");
                     break;
 
                 case 6:
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     int num5 = 5000;
                     System.out.println("tamaño" + num5);
@@ -579,6 +580,8 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio + " milisegundos");
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -590,8 +593,8 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println("Tiempo finalizacion " + tiempoFinal + " milisegundos");
                     System.out.println("\n");
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -599,8 +602,8 @@ public class Matriz {
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos5 = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio1 + " milisegundos");
 
                     int repartir5 = num5 % nHilos5;
 
@@ -637,18 +640,16 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+                    System.out.println("Tiempo finalizacion " + tiempoFinal1 + " milisegundos");
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
-                    System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
+                    System.out.println("Sin hilos: " + tiempoFinal + " milisegundos");
+                    System.out.println("Con hilos: " + tiempoFinal1 + " milisegundos");
                     break;
 
                 case 7:
-                    tiempoInicio = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio / 100000));
 
                     System.out.println("Ingrese el valor de la matriz cuadrada \n");
                     int num6 = sn.nextInt();
@@ -681,6 +682,8 @@ public class Matriz {
                     }
                     System.out.println("\n");
 
+                    tiempoInicio = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio + " milisegundos");
 //-----------------------------------------------------------------------------------------------------------------------
                     System.out.println(" ----- Respuesta sin hilos -----");
 
@@ -692,8 +695,8 @@ public class Matriz {
                         System.out.println("|" + "\n");
                     }
 
-                    tiempoFinal = System.nanoTime() - tiempoInicio;
-                    System.out.println((tiempoFinal / 1000000) + " milisegundos");
+                    tiempoFinal = System.currentTimeMillis() - tiempoInicio;
+                    System.out.println(tiempoFinal + " milisegundos");
                     System.out.println("\n");
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -701,8 +704,8 @@ public class Matriz {
                     System.out.println("Ingrese el numero de hilos");
                     int nHilos6 = sn.nextInt();
 
-                    tiempoInicio1 = System.nanoTime();
-                    System.out.println("Tiempo inicial " + (tiempoInicio1 / 100000));
+                    tiempoInicio1 = System.currentTimeMillis();
+                    System.out.println("Tiempo de inicio " + tiempoInicio1 + " milisegundos");
 
                     int repartir6 = num6 % nHilos6;
 
@@ -739,13 +742,13 @@ public class Matriz {
                         System.out.println("\n");
                     }
 //-----------------------------------------------------------------------------------------------------------------------
-                    tiempoFinal1 = System.nanoTime() - tiempoInicio1;
-                    System.out.println((tiempoFinal1 / 1000000) + " milisegundos");
+                    tiempoFinal1 = System.currentTimeMillis() - tiempoInicio1;
+                    System.out.println("Tiempo finalizacion" + tiempoFinal1 + " milisegundos");
 
                     System.out.println("\n " + " ----- Tiempos de ejecucion -----");
 
-                    System.out.println("Sin hilos: " + (tiempoFinal / 1000000) + " milisegundos");
-                    System.out.println("Con hilos: " + (tiempoFinal1 / 1000000) + " milisegundos");
+                    System.out.println("Sin hilos: " + tiempoFinal + " milisegundos");
+                    System.out.println("Con hilos: " + tiempoFinal1 + " milisegundos");
                     break;
                 case 8:
                     salir = true;
